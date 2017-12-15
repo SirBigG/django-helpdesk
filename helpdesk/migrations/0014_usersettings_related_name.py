@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import django
+
 from django.db import migrations, models
 from django.conf import settings
 
@@ -15,6 +17,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='usersettings',
             name='user',
-            field=models.OneToOneField(to=settings.AUTH_USER_MODEL, related_name='usersettings_helpdesk'),
+            field=models.OneToOneField(to=settings.AUTH_USER_MODEL, related_name='usersettings_helpdesk', on_delete=django.db.models.deletion.CASCADE),
         ),
     ]
