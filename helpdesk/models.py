@@ -1100,7 +1100,9 @@ class UserSettings(models.Model):
 
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
-        related_name="usersettings_helpdesk")
+        related_name="usersettings_helpdesk",
+        on_delete=models.CASCADE
+    )
 
     settings_pickled = models.TextField(
         _('Settings Dictionary'),
