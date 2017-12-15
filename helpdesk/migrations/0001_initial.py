@@ -286,7 +286,7 @@ class Migration(migrations.Migration):
             name='TicketDependency',
             fields=[
                 ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
-                ('depends_on', models.ForeignKey(related_name='depends_on', verbose_name='Depends On Ticket', to='helpdesk.Ticket')),
+                ('depends_on', models.ForeignKey(related_name='depends_on', verbose_name='Depends On Ticket', to='helpdesk.Ticket', on_delete=django.db.models.deletion.CASCADE)),
                 ('ticket', models.ForeignKey(related_name='ticketdependency', verbose_name='Ticket', to='helpdesk.Ticket', on_delete=django.db.models.deletion.CASCADE)),
             ],
             options={
