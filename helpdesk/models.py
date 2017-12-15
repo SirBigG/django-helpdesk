@@ -527,7 +527,7 @@ class Ticket(models.Model):
         """
         from django.contrib.sites.models import Site
         from django.core.exceptions import ImproperlyConfigured
-        from django.core.urlresolvers import reverse
+        from django.urls import reverse
         try:
             site = Site.objects.get_current()
         except ImproperlyConfigured:
@@ -547,7 +547,7 @@ class Ticket(models.Model):
         """
         from django.contrib.sites.models import Site
         from django.core.exceptions import ImproperlyConfigured
-        from django.core.urlresolvers import reverse
+        from django.urls import reverse
         try:
             site = Site.objects.get_current()
         except ImproperlyConfigured:

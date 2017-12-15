@@ -33,7 +33,7 @@ def reload_urlconf(urlconf=None):
     if urlconf in sys.modules:
         reload(sys.modules[urlconf])
 
-    from django.core.urlresolvers import clear_url_caches
+    from django.urls import clear_url_caches
     clear_url_caches()
 
 
